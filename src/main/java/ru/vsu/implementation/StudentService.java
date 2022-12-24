@@ -14,7 +14,7 @@ public class StudentService implements ru.vsu.logic.StudentService {
 
     @Override
     public List<String> getAdultStudentsLastNameSorted(Collection<Student> students) {
-        return (List)students.stream()
+        return students.stream()
                 .filter((student) -> student.getAge() >= 18)
                 .map(Student::getLastName)
                 .sorted()
@@ -23,7 +23,7 @@ public class StudentService implements ru.vsu.logic.StudentService {
 
     @Override
     public Set<Student> getExcellentStudents(Collection<Student> students) {
-        return (Set)students.stream()
+        return students.stream()
                 .filter((student) -> student.getExamResults().stream()
                                     .map(ExamResult::getMark)
                                     .allMatch((num) -> num == 5))
@@ -40,7 +40,7 @@ public class StudentService implements ru.vsu.logic.StudentService {
 
     @Override
     public Student findYoungestStudent(Collection<Student> students) {
-        return (Student)students.stream()
+        return students.stream()
                 .min(Comparator.comparing(Student::getAge)).orElse(null);
     }
 }

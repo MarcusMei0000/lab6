@@ -34,7 +34,7 @@ public class TeacherServiceTests {
         Map<String, List<Student>> expectedTeachersToStudentsMap =
                 Map.of(
                         MAXIM_TEACHER.getFullName(), List.of(STUDENT_VLADIMIR),
-                        ANDREY_TEACHER.getFullName(), List.of(STUDENT_ANN,STUDENT_MARIA)
+                        ANDREY_TEACHER.getFullName(), List.of(STUDENT_MARIA,STUDENT_ANN)
                 );
 
         // when

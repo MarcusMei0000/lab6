@@ -9,5 +9,8 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32-sources.jar!/" />
     </SOURCES>
+    <excluded>
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar!/" />
+    </excluded>
   </library>
 </component>
