@@ -26,8 +26,9 @@ public class TeacherService implements ru.vsu.logic.TeacherService {
     public Map<String, List<Student>> getTeacherNameToSupervisedStudentsMap(Collection<Student> students) {
         return students.stream()
                 .filter((student) -> student.getSupervisor() != null)
-                .sorted(Comparator.comparingInt(Student::getAge).reversed())
+                .sorted(Comparator.comparing(Student::getLastName))
                 .collect(Collectors.groupingBy((student) -> student.getSupervisor().getFullName(), Collectors.toList()));
+
     }
 
     @Override
